@@ -1,0 +1,305 @@
+/*Color Pallete
+<!--Black: #000
+    Cream: #FEF7DC
+    Brown Cream: #E6DDC6
+    link color purple: #4C4C6D
+    Greyish Brown: #A19882
+*/
+*/
+/*New Color Pallete
+Main Body: #D5EEBB
+Container : #7FC8A9
+Header: #5F7A61
+Headings: #ECE7B4
+
+
+*/
+body {
+  background: #D5EEBB;  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+      background-color: #D5EEBB;
+      color: black;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizelegibility;
+      
+    }
+  
+    .container {
+      width: 1000px;
+      background-color: #7FC8A9;
+      margin: auto;
+          padding: 10px 10px; 
+          padding-bottom: 10px;
+    }
+  
+    /*Headings*/
+    h1{
+        margin-top: 120px;
+        margin-bottom: 20px;
+        text-align: center;
+        padding-top: 2px;
+      font-size: 60px;
+     
+    }
+   
+    .heading{
+      font-size: 20px;
+      background-color: #ECE7B4;
+      text-align: left;
+      margin: 5px 2px 5px 2px;
+      padding: 5px;
+      font-weight: bold;
+     -weight-font-smoothing: antialiased;
+      text-rendering: optimiselegibility;  
+    }
+    h2{
+      background-color: #ECE7B4;
+      font-size: 20px;
+      font-weight: bold;
+      /*margin: 2px;
+      padding: 5px;*/
+      text-align: left;
+    }
+   
+    .name, .rollno{
+      margin: 3px; 
+      padding: -10px 3px 0 3px;
+    } 
+  
+    /*Content*/
+    .theory, .aim, .reqtable{
+      padding-bottom: 5px;
+      margin: 10px;
+    }
+  
+    .link{
+      color: #4C4C6D;
+      font-style: italic;
+    }
+      .PLQ{
+      font-weight: bold;
+      padding: 0 0;
+      margin: 10px;
+    }
+    .mcq{
+      padding: 10px 10px;
+      margin: 2px 0px 5px 15px;
+    }
+  
+  .q{
+      font-weight: bold;
+      padding: 0 0px;
+      margin: 10px;
+    } 
+    
+    .procedure, .objective{
+      padding: 0 15px;
+      margin: 10px; 
+    }  
+    .obspara{
+      padding: 0 5px;
+      margin: 0px auto; 
+      font-weight: bold;
+    }
+  
+    /*Table*/
+    .obstable{
+      text-align: center;
+      width: 100%;
+      border-collapse: collapse;
+      column-width: 100px;
+      column-gap: 100px;
+      margin: 5px auto;
+      padding: 5px;
+      
+    }
+  .observation{
+    padding: 5px 0;
+  }
+    .obstable th{
+      width: 150px;
+    }
+  
+    .obstable td{
+      height: 40px;
+      padding: 3px;
+      margin: auto;
+    }
+  
+    .rtable{
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+    }
+  
+    .rtable th{
+  width: 150px;
+    }
+  
+    .rtable td{
+      height: 25px ;
+    }
+  
+  
+   /*Buttons*/
+    .submit{
+      background-color: #A19882;
+      color: #D5EEBB;
+      font-weight: bold;
+      font-size: larger;
+      font-family: Calibri (Body);
+      padding: 5px;
+      margin: 5px auto; 
+      display: block;
+        }
+  
+    .clear{
+          background-color: #A19882;
+          color: #D5EEBB;
+          font-weight: normal;
+          padding: 5px;
+          margin: auto; 
+          display: block;
+            } 
+  
+   .imgsubmit{
+      background-color: #A19882;
+      color: #D5EEBB;
+      font-weight: bold;
+      padding: auto;
+      margin: 2px; 
+    }
+    .conclusion{
+      margin: auto;
+      font-family: Calibri;
+      font-size: 15px;
+    }
+  
+    /*Simulation Image */
+    .simulationimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  
+    /*User Input*/  
+
+    .da{
+      padding: 3px 0;
+      margin: 2px;
+    }
+
+    /*Nav Bar*/
+    /* Add a black background color to the top navigation */
+    header img {
+      height: 80px;
+      margin-left: 20px ;
+      padding-bottom: 20px;
+        }
+    
+  header{
+  background-color:#ECE7B4 ;
+  font-size: 25px;
+  align-items: center;
+  float: right;
+  background-image: url("C:\Users\admin\Desktop\Tanu\Studies\7th Sem\Minor Project\nirma logo.jpeg") left center no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  float: right;
+  padding-top: 20px;
+  font-weight: bold;
+  
+}
+
+
+/*header *{
+  display: inline; 
+}*/
+ 
+header nav {
+    text-align: center;
+    float: right;
+}
+header nav ul{
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style: none;
+    line-height: 80px;
+}
+header nav ul li{
+    float: right;
+    padding: 0 10px;
+    
+}
+
+header nav ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: right;
+    
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 20px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #D5EEBB;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #D5EEBB;
+    min-width: 163px;
+    min-height: fit-content;
+    height: min-content;
+    align-items: center;
+      
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    font-size: 15px;
+    color: black;
+    padding: 1px 2px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ECE7B4;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+   
+  }
