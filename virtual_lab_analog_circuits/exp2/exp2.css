@@ -1,0 +1,378 @@
+/*Color Pallete
+<!--Black: #000
+    Cream: #FEF7DC
+    Brown Cream: #E6DDC6
+    link color purple: #4C4C6D
+    Greyish Brown: #A19882
+*/
+/*New Color Pallete
+Darker Orange :#E26A2C in place of Mint Blue: #CEE5D0
+Container Orange: #FDA65D
+Header Dark Skin: #FDA65D
+Ochre-ish: #FFD07F
+
+
+*/
+
+body {
+    background: #D5EEBB;  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+      background-color: #D5EEBB;
+      color: black;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizelegibility;
+      
+    }
+    .theoryhead{
+        padding-top: 0px;
+        background-image: black;
+    }
+    .headertheory{
+        padding: 450px;
+        display: flex;
+    }
+
+    .container {
+      width: 1000px;
+      background-color: #7FC8A9 ;
+      margin: auto;
+          padding: 5px 10px;
+
+    }
+  
+    /*Headings*/
+    
+      
+    .heading{
+      font-size: 20px;
+      background-color: #ECE7B4;
+      text-align: left;
+      margin: 20px 2px 5px 2px;
+      padding: 10px;
+      font-weight: bold;
+     -weight-font-smoothing: antialiased;
+      text-rendering: optimiselegibility;  
+    }
+    .aheading{
+        font-size: 20px;
+        background-color:#ECE7B4;
+        text-align: left;
+        margin: 5px 2px 5px 2px;
+        padding: 5px;
+        font-weight: bold;
+       -weight-font-smoothing: antialiased;
+        text-rendering: optimiselegibility;  
+      }
+      
+    .bheading{
+        font-size: 20px;
+        background-color: #ECE7B4;
+        text-align: left;
+        margin-top: 90px;
+        padding: 5px;
+        
+        
+        font-weight: bold;
+       -weight-font-smoothing: antialiased;
+        text-rendering: optimiselegibility;  
+      }
+    
+    h2{
+      background-color: #ECE7B4;
+      font-size: 20px;
+      font-weight: bold;
+      /*margin: 2px;
+      padding: 5px;*/
+      text-align: left;
+    }
+   
+    .name, .rollno{
+      margin: 3px; 
+      padding: -10px 3px 0 3px;
+    } 
+  
+    /*Content*/
+    .theory{
+      padding-bottom: 5px;
+      margin-top: 10px;
+    }
+  
+    .aim, .reqtable{
+    padding:10px;
+      margin: 5px;
+      
+    }
+    .link{
+      color: #4C4C6D;
+      font-style: italic;
+    }
+      .PLQ{
+      font-weight: bold;
+      padding: 0 0;
+      margin: 10px;
+    }
+    .mcq{
+      padding: 10px 10px;
+      margin: 2px 10px 5px 15px;
+      
+    }
+    .mcq1{
+      margin-bottom: 20px;
+    }
+  
+  .q3{
+      
+      margin-bottom: 20px;
+    
+    } 
+    
+    
+    .procedure, .objective{
+      padding: 0 15px;
+      margin: 10px; 
+          }  
+          .procedure{
+            padding-bottom: 20px;
+            
+          }
+    .obspara{
+      padding: 0 5px;
+      margin: 0px auto; 
+      font-weight: bold;
+    }
+  .formulae{
+      text-align: center;
+      padding-top: 0;
+  }
+    /*Table*/
+    .obstable{
+      text-align: center;
+      width: 100%;
+      border-collapse: collapse;
+      column-width: 100px;
+      column-gap: 100px;
+      margin: 5px auto;
+      padding: 5px;
+      
+    }
+  .observation{
+    padding: 5px 0;
+  }
+    .obstable th{
+      width: 150px;
+    }
+  
+    .obstable td{
+      height: 40px;
+      padding: 3px;
+      margin: auto;
+    }
+  
+    .rtable{
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+    }
+  
+    .rtable th{
+  width: 150px;
+    }
+  
+    .rtable td{
+      height: 25px ;
+    }
+  .rvalues{
+    padding-bottom: 0;
+  }
+  
+   /*Buttons*/
+    .submit{
+      background-color: #D5EEBB;
+      color: black;
+      font-weight: normal;
+      font-size: larger;
+      font-family: Calibri (Body);
+      padding: 5px;
+      margin: 5px auto; 
+      display: block;
+        }
+  
+    .clear{
+          background-color: #D5EEBB;
+          color: #7FC8A9;
+          font-weight: normal;
+          padding: 5px;
+          margin: auto; 
+          display: block;
+            } 
+  
+   .imgsubmit{
+      background-color: #D5EEBB;
+      color: black;
+      font-weight: bold;
+      padding: auto;
+      margin: 2px; 
+      font-family: Calibri (Body);
+    }
+    .conclusion{
+      margin: auto;
+      font-family: Calibri;
+      font-size: 15px;
+    }
+  
+    /*Simulation Image */
+    .simulationimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  
+    /*User Input*/  
+
+    .da{
+      padding: 3px 0;
+      margin: 2px;
+    }
+
+    /*Nav Bar*/
+    /* Add a black background color to the top navigation */
+    header img {
+      height: 80px;
+      margin-left: 20px ;
+      padding-bottom: 20px;
+        }
+    
+  header{
+  background-color:#5F7A61 ;
+  font-size: 15px;
+  align-items: center;
+  float: right;
+  background-image: url("C:\Users\admin\Desktop\Tanu\Studies\7th Sem\Minor Project\nirma logo.jpeg") left center no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  float: right;
+  padding-top: 20px;
+  
+ 
+  
+}
+
+
+*header *{
+  display: inline; 
+}
+ 
+header nav {
+    text-align: center;
+    float: none;
+    padding-left: 30px;
+}
+header nav ul{
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style: none;
+    line-height: 80px;
+}
+header nav ul li{
+        padding: 0 10px;
+    padding-left: 20px;
+    display: inline-block;
+    font-weight: bold;
+    
+}
+
+header nav ul li a{
+    color: black;
+    text-decoration: none;
+    
+}
+/*Nav Bar*/
+    /* Add a black background color to the top navigation */
+    header img {
+        height: 80px;
+        margin-left: 20px ;
+        padding-bottom: 20px;
+          }
+      
+    header{
+    background-color:#5F7A61 ;
+    font-size: 15px;
+    align-items: center;
+  
+        position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    
+    padding-top: 20px;
+    font-weight: bold;
+    
+  }
+  
+  
+  /*header *{
+    display: inline; 
+  }*/
+   
+  header nav {
+      text-align: center;
+     
+  }
+  header nav ul{
+      margin: 0;
+      padding: 0;
+      display: block;
+      list-style: none;
+      line-height: 80px;
+  }
+  header nav ul li{
+     
+      padding: 0 10px;
+      
+  }
+  
+  header nav ul li a{
+      color: black;
+      text-decoration: none;
+  }
+  
+/*Previous Next Buttons*/
+.previous {
+  background-color: #7FC8A9;
+  color: black;
+  align-content: center;
+  margin: auto 5px;
+  padding:5px;
+  
+  position:absolute;
+  bottom:5;
+  left: 70px;
+}
+
+.next {
+  background-color: #7FC8A9;
+  color: black;
+  align-content: center ;
+  margin: 10px;
+   padding:5px;
+   
+   position:absolute;
+   bottom:5;
+   right: 90px;
+}
+#check_button, #connect_button, #reset_button{
+  background-color: #7FC8A9;
+  color: black;
+  align-content: center;
+  margin:  5px;
+  padding:5px;
+}

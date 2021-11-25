@@ -1,0 +1,179 @@
+/*Color Pallete
+<!--Black: #000
+    Cream: #FEF7DC
+    Brown Cream: #E6DDC6
+    link color purple: #4C4C6D
+    Greyish Brown: #A19882
+*/
+
+body {
+    background: #FEF7DC;  
+    font-family: Calibri (Body);
+      background-color: #FEF7DC;
+      color: black;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizelegibility;
+    }
+  
+    .container {
+      width: 1000px;
+      background-color: #FEF7DC;
+      margin: auto;
+      padding: auto; 
+    }
+  
+    /*Headings*/
+    h1{
+      text-align: center;
+      /*margin: 10px;
+      padding: 0px;*/
+      font-size: 60px;
+    }
+    .heading{
+      font-size: 20px;
+      background-color: #E6DDC6;
+      text-align: left;
+      margin: 5px 2px 5px 2px;
+      padding: 5px;
+      font-weight: bold;
+     -weight-font-smoothing: antialiased;
+      text-rendering: optimiselegibility;  
+    }
+    h4{
+      background-color: #E6DDC6;
+      font-size: 20px;
+      font-weight: bold;
+      /*margin: 2px;
+      padding: 5px;*/
+      text-align: left;
+    }
+   
+    .name, .rollno{
+      margin: 3px; 
+      padding: -10px 3px 0 3px;
+    } 
+  
+    /*Content*/
+   /* .theory, .aim, .reqtable{
+      padding: 0 0;
+      margin: 10px;
+    }*/
+  
+    .link{
+      color: #4C4C6D;
+      font-style: italic;
+    }
+      .PLQ{
+      font-weight: bold;
+      padding: 0 0;
+      margin: 10px;
+    }
+    .mcq{
+      padding: 10px 10px;
+      margin: 2px 0px 5px 15px;
+    }
+  
+  .q{
+      font-weight: bold;
+      padding: 0 0px;
+      margin: 10px;
+    } 
+    
+    .procedure, .objective{
+      padding: 0 15px;
+      margin: 10px; 
+    }  
+    .obspara{
+      padding: 0 5px;
+      margin: 0px auto; 
+      font-weight: bold;
+    }
+  
+    /*Table*/
+    .obstable{
+      text-align: center;
+      width: 100%;
+      border-collapse: collapse;
+      column-width: 100px;
+      column-gap: 100px;
+      margin: 5px auto;
+      padding: 5px;
+      
+    }
+  .observation{
+    padding: 5px 0;
+  }
+    .obstable th{
+      width: 150px;
+    }
+  
+    .obstable td{
+      height: 40px;
+      padding: 3px;
+      margin: auto;
+    }
+  
+    .rtable{
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+    }
+  
+    .rtable th{
+  width: 150px;
+    }
+  
+    .rtable td{
+      height: 25px ;
+    }
+  
+  
+   /*Buttons*/
+    .submit{
+      background-color: #A19882;
+      color: #FEF7DC;
+      font-weight: bold;
+      font-size: larger;
+      font-family: Calibri (Body);
+      padding: 5px;
+      margin: 5px auto; 
+      display: block;
+        }
+  
+    .clear{
+          background-color: #A19882;
+          color: #FEF7DC;
+          font-weight: normal;
+          padding: 5px;
+          margin: auto; 
+          display: block;
+            } 
+  
+   .imgsubmit{
+      background-color: #A19882;
+      color: #FEF7DC;
+      font-weight: bold;
+      padding: auto;
+      margin: 2px; 
+    }
+    .conclusion{
+      margin: auto;
+      font-family: Calibri;
+      font-size: 15px;
+    }
+  
+    /*Simulation Image */
+    .simulationimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  
+    /*User Input*/  
+
+
+    .da{
+      padding: 3px 0;
+      margin: 2px;
+    }
