@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="EMF Generation" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <title>Wein bridge oscillator</title>
+
+    <link rel="stylesheet" href="demo1.css" />
+    <script src="graph.ob.js"></script>
+    <script src="graph_use.ob.js"></script>
+
+    <style type="text/css">
+      body {
+        background-color: #eceff4;
+      }
+      h1 {
+        color: black;
+      }
+
+      #wrapper {
+        width: 100%;
+      }
+      .newpos {
+        position: absolute;
+        top: 1140px;
+        left: 54px;
+      }
+
+      .newposl {
+        position: absolute;
+        top: 1220px;
+        left: 54px;
+      }
+
+      .dropbtn {
+        background-color: #989898;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #6b6464;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: relative;
+        background-color: linen;
+        min-width: 750px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1><u>Wein bridge oscillator</u></h1>
+    </center>
+    <br />
+
+    <div class="dropdown" style="left: 40px;">
+      <button onclick="dropdown()" class="dropbtn">Procedure</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#home"
+          ><b>1) Connect the output terminals to the cro.(L1-L2,L3-L4)</b
+          ><br /><br />
+          <b
+            >2) Click on the "check" button to check if the connections are
+            right.</b
+          ><br /><br />
+          <b
+            >3) Once you make sure that the connections are right, you may vary
+            the resistance and calculate the output frequency </b
+          ><br /><br />
+          <b>4) Increase the resistance from 0.3K&ohm; to 300K&ohm;. </b
+          ><br /><br />
+          <b
+            >5) Click on "Add to table" button to add the reading to the
+            table.</b
+          ><br /><br />
+          <b>6) Observe the waveform in the graph</b><br /><br />
+        </a>
+      </div>
+    </div>
+    <div class="jtk-demo-main">
+      <!-- demo -->
+      <div
+        class="jtk-demo-canvas canvas-wide animation-demo jtk-surface jtk-surface-nopan"
+        id="canvas"
+      >
+        <div class="littledot" id="ld1">
+          <br /><a href="#" class="cmdLink detach" rel="ld1">L<sub>1</sub></a>
+        </div>
+        <div class="littledot" id="ld3">
+          <br /><a href="#" class="cmdLink detach" rel="ld3">L<sub>3</sub></a>
+        </div>
+        <div class="littledot" id="ld2">
+          <br /><a href="#" class="cmdLink detach" rel="ld2">L<sub>2</sub></a>
+        </div>
+        <div class="littledot" id="ld4">
+          <br /><a href="#" class="cmdLink detach" rel="ld4">L<sub>4</sub></a>
+        </div>
+
+        <!-- <div class="littledot" id="ld3">
+          <br /><a href="#" class="cmdLink detach" rel="ld3">L<sub>3</sub></a>
+        </div>
+        <div class="littledot newpos">
+          <br /><a href="#" class="cmdLink detach" rel="ld4">l<sub>4</sub></a>
+        </div>
+        <div class="littledot newposl">
+          <br /><a href="#" class="cmdLink detach" rel="ld2">L<sub>2</sub></a>
+        </div> -->
+
+        <!-- /demo -->
+        <!-- explanation -->
+
+        <!-- /explanation -->
+      </div>
+    </div>
+
+    <!-- JS -->
+    <div
+      id="wrapper"
+      style="
+        position: absolute;
+        border: 2px solid;
+        top: 160px;
+        width: 950px;
+        height: 1900px;
+        left: 20px;
+      "
+    >
+      <div style="position: absolute; left: -20px; top: 500px;">
+        <table width="0%" border="0">
+          <form id="myForm">
+            <tr align="center">
+              <td>
+                <label
+                  ><b
+                    ><font color="#000000" size="5"
+                      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select
+                      Resistance(R1) &nbsp;&nbsp;=&nbsp;
+                    </font></b
+                  ></label
+                >
+              </td>
+              <td>
+                <input type="range" id="range" min="0.3" max="300" step="0.1" />
+
+                <input
+                  style="
+                    background: #989898 !important;
+                    height: 50px;
+                    width: 100px;
+                  "
+                  id="calc"
+                  type="button"
+                  value=" Calculate "
+                  onclick="cal()"
+                />
+              </td>
+            </tr>
+          </form>
+        </table>
+      </div>
+      <br />
+      <br />
+
+      <div style="position: absolute; left: 150px; top: 600px;">
+        <table align="center" width="0%" border="1">
+          <tr>
+            <td>
+              <b
+                ><font color="#000000" size="4"
+                  >Resistance(R)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font
+                ></b
+              >
+              <b><span id="demo"></span></b>
+              <font color="#000000" size="4"><b>K&ohm;</b></font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b
+                ><font color="#000000" size="4"
+                  >Capacitance(C)&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font
+                ></b
+              >
+              <b>0.01</b><font color="#000000" size="4"><b>&micro;F</b></font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b><font color="#000000" size="4">Frequency(f)&nbsp;=</font></b
+              >&nbsp;&nbsp;&nbsp;&nbsp;<label id="result"><b>0</b></label
+              >&nbsp;<font color="#000000" size="4"
+                ><b>KH<sub>z</sub></b></font
+              >
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <label
+                ><input
+                  style="
+                    background: #989898 !important;
+                    height: 50px;
+                    width: 100px;
+                  "
+                  id="add"
+                  type="button"
+                  value=" Add to table "
+                  onclick="Add()"
+              /></label>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="position: absolute; top: 47px; left: 50px;">
+        <img src="vlab_ckt.jpg" width="850px" alt="" height="400px" />
+      </div>
+
+      <div
+        id="tblwrap"
+        style="
+          position: absolute;
+          border: 2px solid #b8b8b8;
+          top: 1330px;
+          width: 800px;
+          height: 500px;
+          left: 85px;
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            font-size: 16px;
+            background-color: #b8b8b8;
+            top: 0px;
+            left: 0px;
+            width: 800px;
+            height: 50px;
+            font-weight: bold;
+          "
+        >
+          <p style="color: black;">
+            Observation Table &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </p>
+        </div>
+
+        <div
+          id="table"
+          style="
+            background-color: #eceff4;
+            position: absolute;
+            top: 50px;
+            width: 800px;
+            height: 450px;
+            left: 0px;
+            overflow-y: auto;
+          "
+        >
+          <table id="mytable" width="800" border="1">
+            <tr>
+              <th>SN.</th>
+              <th>Resistance<br />(R)</th>
+              <th>Capacitance<br />(C)</th>
+              <th>Frequency<br />(KH<sub>z</sub>)</th>
+            </tr>
+          </table>
+          <!-- <table id="mytable" border="1" >
+                    </table> -->
+        </div>
+      </div>
+
+      <div
+        style="
+          position: absolute;
+          border: 2px solid #b8b8b8;
+          top: 850px;
+          left: 80px;
+          width: 800px;
+          height: 400px;
+        "
+      >
+        <img
+          src="ext.png"
+          alt=""
+          style="position: relative; left: -70px; top: 100px; z-index: -10;"
+        />
+        <div
+          style="
+            position: absolute;
+            font-size: 16px;
+            background-color: #b8b8b8;
+            top: 0px;
+            left: 0px;
+            width: 800px;
+            height: 40px;
+            font-weight: bold;
+          "
+        >
+          <p style="text-align:center; color:rgb(66, 62, 62)45, 238, 0)">
+            <b> GRAPH </b>
+          </p>
+        </div>
+
+        <div
+          id="l1"
+          style="
+            position: absolute;
+            background-image: url(graph.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 40px;
+            width: 800px;
+            height: 360px;
+          "
+        ></div>
+      </div>
+    </div>
+
+    <div style="position: absolute; left: 330px; top: 570px;">
+      <button id="check-button">Check</button>
+      <input
+        id="reset"
+        type="reset"
+        onclick="window.location.href = 'index.html';"
+        value="Reset"
+      />
+    </div>
+    <br />
+    <script>
+      document.getElementById("range").disabled = true;
+      document.getElementById("calc").disabled = true;
+      document.getElementById("add").disabled = true;
+    </script>
+    <script>
+      var slider = document.getElementById("range");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+
+      slider.oninput = function () {
+        output.innerHTML = this.value;
+      };
+    </script>
+
+    <script>
+      var n = 1;
+      var xx = [];
+      var yy = [];
+      var E;
+      var C;
+      var X;
+      var O;
+      var T;
+      var i;
+
+      function cal() {
+        E = parseFloat(document.getElementById("range").value);
+        C = parseFloat(0.01);
+        T = 1 / (2 * 3.14 * E * C);
+        O = T;
+
+        var datapoints1 = [];
+
+        for (i = 0; i <= 10; i = i + 0.09) {
+          X = (i / (E * C)) * 1000;
+          datapoints1.push({ x: i, y: Math.sin(X) });
+        }
+        drawgraph("l1", datapoints1, "time(t)", "Output voltage(mV)");
+
+        document.getElementById("result").innerHTML = O.toFixed(3);
+        document.getElementById("C").innerHTML = C.toFixed(3);
+        document.getElementById("E").innerHTML = E.toFixed(3);
+      }
+
+      function Add() {
+        var table = document.getElementById("mytable");
+
+        // Create an empty <tr> element and add it to the 1st position of the table:
+        var row = table.insertRow(-1);
+        // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+
+        cell1.innerHTML = n++;
+        cell2.innerHTML = E;
+        cell3.innerHTML = C;
+        cell4.innerHTML = O.toFixed(3);
+
+        xx.push(C);
+        yy.push(O);
+        drawgraph();
+      }
+
+      function change1() {
+        if (document.getElementById("W").value == "lap") {
+          document
+            .getElementById("lap")
+            .setAttribute("value", document.getElementById("P").value);
+        }
+      }
+
+      function dropdown() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+
+      function pr() {
+        window.print();
+      }
+    </script>
+    <script src="jsplumb1.js"></script>
+    <script src="demo1.js"></script>
+  </body>
+</html>

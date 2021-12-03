@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--Color Pallete-->
+<!--Black: #000
+    Cream: #FEF7DC
+    Brown Cream: #E6DDC6
+    link color purple: #4C4C6D
+    Greyish Brown: #A19882
+-->
+
+<html>
+
+<head>
+    <title> Experiment 6 </title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1> Experiment 6</h1>
+    <div class="container">
+        <h2 class="heading"> Student Details </h2>
+        <!--Student Details-->
+
+
+
+        <form class="details">
+            Name: <input type="text" placeholder="Student Name" class="name"><br>
+            Roll Nu:<input type="text" placeholder="Roll Number" class="rollno"><br>
+            Date: <input type="text" placeholder="Date of completion" class="name"><br>
+        </form>
+    </div>
+
+    <div class="container">
+        <!--AIM-->
+        <h2 class="heading"> Aim</h2>
+        <p class="aim"> Audio frequency filter using OPAMP IC μA741.</p>
+    </div>
+
+    <div class="container">
+        <!--OBJECTIVE-->
+        <h2 class="heading"> Objective</h2>
+        <ol class="objective">
+            <li> To design and implement for audio frequency range 20Hz to 20kHz.</li>
+            <li> To design and analyze the second--order low pass.</li>
+        </ol>
+    </div>
+
+        <!--PRE LAB QUIZ-->
+        <div class="container">
+        <h2 class="heading"> Pre Lab Quiz</h2>
+        <p class="PLQ"> Sketch ideal frequency response for all types of filters.</p>
+        <form action="/action_page.php">
+            <label for="img" class="mcq">Select image:</label>
+            <input type="file" class="mcq" name="img" accept="image/*"> </br>
+            <input type="submit" class='imgsubmit' align="center">
+        </form>
+
+        </div>
+
+        <div class="container">
+            <!--REFERENCE BOOK-->
+            <h2 class="heading"> Reference Book:</h2>
+            <ol class="objective">
+                <li> Ramakant A. Gayakwad- op-amp and Linear Integrated Circuits, Pearson Education; Fourth edition.</li>
+                
+            </ol>
+        </div>
+    
+    <div class="container">
+        <!--THEORY-->
+        <h2 class="heading"> Theoretical Calculations </h2>
+        <p class="theory"> </p>
+        <!--COMPONENT REQUIREMENT TABLE-->
+        <h2 class="heading"> Component required </h2>
+        <p class="reqtable">Select the necessary equipment/apparatus/components required for this experiment and
+            list all of them in below-given space:</p>
+    </div>
+
+    <div class="container">
+        <form METHOD="POST">
+            <table border="1" class="rtable">
+                <tr>
+                    <th class="innertable">Component Name </th>
+                    <th class="innertable"> Specifications</th>
+                    <th class="innertable"> Justification</th>
+                </tr>
+                <tr>
+                    <td contenteditable='true'>Op-Amp</td>
+                    <td contenteditable='true'>μA741</td>
+                    <td contenteditable='true'>Build LPF</td>
+                </tr>
+
+                <tr>
+                    <td contenteditable='true'>Resistor</td>
+                    <td contenteditable='true'>10 kΩ</td>
+                    <td contenteditable='true'>Build LPF</td>
+
+                </tr>
+
+
+                <tr>
+                    <td contenteditable='true'>DC Voltage Supply</td>
+                    <td contenteditable='true'>15 V</td>
+                    <td contenteditable='true'>Power Op-Amp</td>
+                </tr>
+
+                <tr>
+                    <td contenteditable='true'>Capacitor</td>
+                    <td contenteditable='true'>0.1 μF</td>
+                    <td contenteditable='true'>Build LPF</td>
+                </tr>
+                <tr>
+                    <td contenteditable='true'>Function Generator</td>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'>Generate AC signal</td>
+                </tr>
+              
+    </div>
+    </table> </br>
+    </form>
+
+
+
+    <!--<form>
+            <strong class="q"> 1. MCQ:</strong><br>
+            <input type="radio" name="MCQ" class="mcq"> A. xyz </br>
+            <input type="radio" name="MCQ" class="mcq"> B. abc </br>
+            <input type="radio" name="MCQ" class="mcq"> C. ijk </br>
+        </form> -->
+
+
+    <!--PROCEDURE-->
+    <h2 class="heading">Procedure </h2>
+    <ol class="procedure">
+        <li><b>Band Pass Filter </b></li>
+        <p>Connect the components as shown in the circuit diagram. Now observe the output for input frequency</p>
+    </ol>
+
+    <button class="button button4"> <a href ="E:\Virtual_Lab\Exp_6\Simulator\Gain_Calculator.html" target="_blank">Simulation</a> </button>
+
+    <!--OBS TABLE-->
+    <h2 class="heading">Observations </h2>
+        <div class="container">
+            <p class="obspara"> Measuring Gain </p>
+        <form METHOD="POST" class="observation">
+            <table border="2" class="obstable" style="width:100px">
+                <tr>
+                    <th class="innertable">DC Values </th>
+                    <th class="innertable"> R<sub>1</sub></th>
+                    <th class="innertable"> R<sub>f</sub></th>
+                    <th class="innertable">A </th>
+                </tr>
+                
+                <tr>
+                    <td class="innertable"><strong>1</strong></td>
+                    <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                    <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                    <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                </tr>
+
+                </tr>
+                <td><strong>2</strong></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                </tr>
+
+                </tr>
+                <td><strong>3</strong></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                </tr>
+                
+                </tr>
+                <td><strong>4</strong></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                </tr>
+                
+                </tr>
+                <td><strong>5</strong></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                <td class="innertable"><INPUT TYPE="text" size="10"></td>
+                </tr>
+            </table>
+    </div></br>
+    <input type="Reset" value="Clear Table" class="clear" align="center">
+    <input type="Submit" value="Submit Experiment" class="submit" align="center">
+    </form>
+</body>
+
+</html>
